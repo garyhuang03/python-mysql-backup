@@ -26,7 +26,7 @@ BACKUP_PATH=backup
 IGNORE_TABLE=your_db.table_name
 ```
 
-1. Run make-database-backup.py
+3. Run make-database-backup.py
 ```
 python3 make-database-part.backup.py section_name backup_type file_limit
 
