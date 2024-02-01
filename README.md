@@ -12,7 +12,9 @@ Simple example to make a MySQL backup with Python.
 git clone https://github.com/ttiverson3/python-mysql-backup.git
 cd python-mysql-backup
 ```
-2. Fill database config to db.ini. Here is an example:
+2. Fill database config to db.ini
+
+Here is an example:
 ```
 [section_name]
 DB_HOST=localhost
@@ -24,7 +26,7 @@ BACKUP_PATH=backup
 IGNORE_TABLE=your_db.table_name
 ```
 
-3. Run make-database-backup.py
+1. Run make-database-backup.py
 ```
 python3 make-database-part.backup.py section_name backup_type file_limit
 
