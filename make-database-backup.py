@@ -86,10 +86,17 @@ if __name__ == "__main__":
 	config.read(f"{current_path}/db.ini")
 	for key, value in config.items(service):
 		# db_host, db_port, db_name, db_user, db_pwd, backup_path
-		locals()[key] = value
-		if (value == ""):
-			error_msg = f"{current_path}/db.ini: '{key.upper()}' is empty for [{service}]"
-			exit(error_msg)
+		if (key == "ignore_table"):
+			if (backup_type == "part"):
+				ignore_table = value
+				if (value == ""):
+					error_msg = f"{current_path}/db.ini: '{key.upper()}' is empty for [{service}]"
+					exit(error_msg)
+		else:
+			locals()[key] = value
+			if (value == ""):
+				error_msg = f"{current_path}/db.ini: '{key.upper()}' is empty for [{service}]"
+				exit(error_msg)
 	
 	backup_args = ['db_host', 'db_port', 'db_name', 'db_user', 'db_pwd', 'backup_path']
 	for arg in backup_args:
