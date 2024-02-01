@@ -16,7 +16,7 @@ cd python-mysql-backup
 
 Here is an example:
 ```
-[section_name]
+[service_name]
 DB_HOST=localhost
 DB_PORT=3306
 DB_NAME=your_db
@@ -28,10 +28,10 @@ IGNORE_TABLE=your_db.table_name
 
 3. Run make-database-backup.py
 ```
-python3 make-database-part.backup.py section_name backup_type file_limit
+python3 make-database-part.backup.py service_name backup_type file_limit
 
 Arguments:
-    section_name     Name of the section
+    service_name     Name of the service
     backup_type      Type of the backup: part or all. ("part" will exclude the table specified in the "IGNORE_TABLE" section of the ini file.)
     file_limit       maximum number of the files in backup folder
 ```
