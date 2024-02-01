@@ -28,7 +28,7 @@ IGNORE_TABLE=your_db.table_name
 
 3. Run make-database-backup.py
 ```
-python3 make-database-part.backup.py service_name backup_type file_limit
+python3 make-database-backup.py service_name backup_type file_limit
 
 Arguments:
     service_name     Name of the service
